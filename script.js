@@ -42,40 +42,32 @@ function mostrarSetaDepoisParar() {
 }
 
 window.addEventListener('scroll', mostrarSetaDepoisParar);
+function showVideo(option) {
+    const videoPlayer = document.getElementById("videoPlayer");
+    const videoSource = document.getElementById("videoSource");
 
-function showText(option) {
-    const displayArea = document.getElementById("displayArea");
-    let text = "";
+  
+    let videoUrl = "";
 
     switch (option) {
         case 1:
-            text = "Tire uma foto do problema ou, se for muito detalhado, descreva o problema em palavras.";
+            videoUrl = "https://youtu.be/6eR8AzL-PYk?si=IAXte_uvLjph5KFf"; 
             break;
         case 2:
-            text = "Veremos o problema e discutiremos qual a melhor opção para melhorar o seu dispositivo, seja Software ou Hardware.";
+            videoUrl = "video2.mp4"; 
             break;
         case 3:
-            text = "Faremos todos os ajustes e diremos ao usuário o dia e a hora específica para retirar sua máquina.";
+            videoUrl = "video3.mp4"; 
             break;
         default:
-            text = "Selecione uma opção.";
+            videoUrl = ""; 
     }
 
-    displayArea.textContent = text;
+    if (videoUrl) {
+        videoSource.src = videoUrl;
+        videoPlayer.load(); 
+        videoPlayer.style.display = "block"; 
+    } else {
+        videoPlayer.style.display = "none"; 
+    }
 }
-
-// Função para exibir o texto correspondente ao botão clicado
-function displayText(step) {
-    const displayArea = document.getElementById("display-area3");
-    
-    // Conteúdo para cada etapa
-    const stepContent = {
-        1: "Tire uma foto do problema ou, se for muito detalhado, descreva o problema em palavras.",
-        2: "Veremos o problema e discutiremos qual a melhor opção para melhorar o seu dispositivo, seja Software ou Hardware.",
-        3: "Faremos todos os ajustes e diremos ao usuário o dia e a hora específica para retirar sua máquina."
-    };
-
-    // Atualizar o conteúdo da área de exibição
-    displayArea.textContent = stepContent[step];
-}
-
