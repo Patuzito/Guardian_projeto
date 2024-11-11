@@ -1,3 +1,5 @@
+// HEADER //
+
 let lastScrollTop = 0;
 const header = document.querySelector('.header');
 
@@ -20,6 +22,7 @@ window.addEventListener('scroll', () => {
 
 ;
 
+// SETA //
 
 const setaBaixo = document.querySelector('.seta-baixo');
 let scrollTimeout;
@@ -42,6 +45,8 @@ function mostrarSetaDepoisParar() {
 }
 
 window.addEventListener('scroll', mostrarSetaDepoisParar);
+
+// PAGINA 3 //
 
 function showText(option) {
     const displayArea = document.getElementById("displayArea");
@@ -77,5 +82,25 @@ function displayText(step) {
 
     // Atualizar o conteúdo da área de exibição
     displayArea.textContent = stepContent[step];
+}
+
+// TESTE PAGINA 2 //
+
+function Image (onclick) {
+     const BoxDisplay = document.getElementById("box-display");
+     let img = "";
+
+     switch (onclick) {
+        case 1:
+            img = "";
+
+        case 2:
+            img = "";
+
+        case 3:
+            img = "";
+     }
+
+
 }
 

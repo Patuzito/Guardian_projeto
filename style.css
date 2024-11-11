@@ -228,11 +228,11 @@ body {
 
 .box1 {
 
-    padding: 60px;
-    padding-top: 10px;
-    padding-bottom: 20px;
-    padding-left: 100px;
-    padding-right: 100px;
+    padding: 50px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 80px;
+    padding-right: 80px;
     padding: fixed;
     background-color: #E82C2C;
     color: white;
@@ -246,14 +246,12 @@ body {
 
 }
 
-
-
 .box2 {
-    padding: 60px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    padding-left: 100px;
-    padding-right: 100px;
+    padding: 50px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 80px;
+    padding-right: 80px;
     background-color: #E82C2C;
     color: white;
     margin: 90px;
@@ -267,9 +265,9 @@ body {
 }
 
 .box3 {
-    padding: 50px;
-    padding-top: 35px;
-    padding-bottom: 35px;
+    padding: 40px;
+    padding-top: 15px;
+    padding-bottom: 15px;
     padding-left: 65px;
     padding-right: 65px;
     background-color: #E82C2C;
@@ -283,6 +281,10 @@ body {
     transition: transform 0.2s;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 
+}
+
+.box1 img, .box2 img, .box3 img {
+    width: 70px;
 }
 
 .box1:hover {
@@ -302,11 +304,13 @@ body {
     padding-bottom: 0%;
     margin: 60px;
     border-radius: 20px;
-    background-color: #dec4c4;
+    background-color: rgb(250, 220, 220);
     margin-top: -100px;
     margin-left: 180px;
     margin-right: 180px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
+
 
 .bnt-page2 {
     align-items: center;
@@ -315,16 +319,8 @@ body {
     margin-bottom: 20px;
 }
 
-.image-box1 {
-   
-}
-
-
-
-
 
 /* PAGINA3 */
-
 
 
 
@@ -404,7 +400,6 @@ body {
 }
 
 
-
 /* ULTIMAPAGINA */
 
 
@@ -467,7 +462,9 @@ body {
     background-color: #870000;
 }
 
-/* FOROOTER */
+/* FOOTER */
+
+
 .conteudofinal {
     text-align: center;
     padding: 50px 20px;
