@@ -1,3 +1,5 @@
+// HEADER //
+
 let lastScrollTop = 0;
 const header = document.querySelector('.header');
 
@@ -20,6 +22,7 @@ window.addEventListener('scroll', () => {
 
 ;
 
+// SETA //
 
 const setaBaixo = document.querySelector('.seta-baixo');
 let scrollTimeout;
@@ -42,32 +45,3 @@ function mostrarSetaDepoisParar() {
 }
 
 window.addEventListener('scroll', mostrarSetaDepoisParar);
-function showVideo(option) {
-    const videoPlayer = document.getElementById("videoPlayer");
-    const videoSource = document.getElementById("videoSource");
-
-  
-    let videoUrl = "";
-
-    switch (option) {
-        case 1:
-            videoUrl = "https://youtu.be/6eR8AzL-PYk?si=IAXte_uvLjph5KFf"; 
-            break;
-        case 2:
-            videoUrl = "video2.mp4"; 
-            break;
-        case 3:
-            videoUrl = "video3.mp4"; 
-            break;
-        default:
-            videoUrl = ""; 
-    }
-
-    if (videoUrl) {
-        videoSource.src = videoUrl;
-        videoPlayer.load(); 
-        videoPlayer.style.display = "block"; 
-    } else {
-        videoPlayer.style.display = "none"; 
-    }
-}
