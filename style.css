@@ -226,13 +226,14 @@ body {
 
 }
 
-.boxe1 {
+.box1 {
 
     padding: 60px;
     padding-top: 10px;
     padding-bottom: 20px;
     padding-left: 100px;
     padding-right: 100px;
+    padding: fixed;
     background-color: #E82C2C;
     color: white;
     margin: 90px;
@@ -247,7 +248,7 @@ body {
 
 
 
-.boxe2 {
+.box2 {
     padding: 60px;
     padding-top: 20px;
     padding-bottom: 20px;
@@ -265,7 +266,7 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.boxe3 {
+.box3 {
     padding: 50px;
     padding-top: 35px;
     padding-bottom: 35px;
@@ -284,15 +285,15 @@ body {
 
 }
 
-.boxe1:hover {
+.box1:hover {
     transform: scale(1.05);
 }
 
-.boxe2:hover {
+.box2:hover {
     transform: scale(1.05);
 }
 
-.boxe3:hover {
+.box3:hover {
     transform: scale(1.05);
 }
 
@@ -312,6 +313,10 @@ body {
     margin-left: 46%;
     margin-top: -20px;
     margin-bottom: 20px;
+}
+
+.image-box1 {
+   
 }
 
 
