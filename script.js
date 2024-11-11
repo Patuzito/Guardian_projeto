@@ -86,21 +86,3 @@ function displayText(step) {
 
 // TESTE PAGINA 2 //
 
-function Image (onclick) {
-     const BoxDisplay = document.getElementById("box-display");
-     let img = "";
-
-     switch (onclick) {
-        case 1:
-            img = "";
-
-        case 2:
-            img = "";
-
-        case 3:
-            img = "";
-     }
-
-
-}
-
