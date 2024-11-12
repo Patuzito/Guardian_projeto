@@ -63,4 +63,6 @@ function displayText(buttonNumber) {
         videoPlayer.load(); 
         videoPlayer.play();  
     }
+
+    
 }
