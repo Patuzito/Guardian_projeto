@@ -361,7 +361,11 @@ body {
    border-radius: 10px;
     display: flex;
     margin: 30px;
-}
+        
+        border: none;
+        background-color: rgb(178, 0, 0);
+    }
+
 
 
 
@@ -416,7 +420,7 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
-    margin-left: 100px;
+    margin-left: 130px;
     
 }
 
@@ -427,7 +431,7 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
-    margin-left: 100px;
+    margin-left: 120px;
     
 }
 
@@ -438,9 +442,10 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
-    margin-left: 100px;
+    margin-left: 130px;
     
 }
+
 
 
 

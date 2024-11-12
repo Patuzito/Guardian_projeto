@@ -45,3 +45,22 @@ function mostrarSetaDepoisParar() {
 }
 
 window.addEventListener('scroll', mostrarSetaDepoisParar);
+
+
+function displayText(buttonNumber) {
+    var videoPlayer = document.getElementById("videoPlayer");
+    var videoSource = document.getElementById("videoSource");
+
+    var videos = [
+        "https://raw.githubusercontent.com/Patuzito/Guardian_projeto/main/Videos/video1.mp4", 
+        "https://raw.githubusercontent.com/Patuzito/Guardian_projeto/main/Videos/video2.mp4", 
+        "https://raw.githubusercontent.com/Patuzito/Guardian_projeto/main/Videos/video3.mp4"  
+    ];
+
+    // Troca o vídeo com base no número do botão clicado
+    if (buttonNumber >= 1 && buttonNumber <= 3) {
+        videoSource.src = videos[buttonNumber - 1];  // Atualiza o src do vídeo
+        videoPlayer.load(); 
+        videoPlayer.play();  
+    }
+}
