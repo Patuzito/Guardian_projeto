@@ -63,6 +63,15 @@ function displayText(buttonNumber) {
         videoPlayer.load(); 
         videoPlayer.play();  
     }
+  var currentVideoIndex = 0;
 
-    
+    // Função para trocar os vídeos
+    function changeVideo() {
+        // Atualiza o vídeo para o próximo
+        currentVideoIndex = (currentVideoIndex + 1) % videos.length;  // Vai para o próximo vídeo (circular)
+        videoSource.src = videos[currentVideoIndex];  // Atualiza o src do vídeo
+        videoPlayer.load();  // Recarrega o vídeo
+        videoPlayer.play();  // Reproduz o vídeo
+    }
+    setInterval(changeVideo, 7000);
 }
