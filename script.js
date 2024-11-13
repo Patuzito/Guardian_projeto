@@ -24,6 +24,7 @@ function mostrarSetaDepoisParar() {
 
 window.addEventListener('scroll', mostrarSetaDepoisParar);
 
+// Pagina 3 //
 
 function displayText(buttonNumber) {
     var videoPlayer = document.getElementById("videoPlayer");
@@ -53,4 +54,7 @@ function changeVideo() {
 // Chama a função a cada 5 segundos (5000 milissegundos)
 setInterval(changeVideo, 5000);
 
+    
 }
+
+ 
