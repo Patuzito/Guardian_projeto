@@ -516,6 +516,22 @@ body {
     background-color: #870000;
 }
 
+/* PAGINA 4 */
+
+.pag4 h1 {
+    font-size: 48px;
+    background: linear-gradient(90.51deg, #FF0000 0.44%, #990000 57.02%);
+    -webkit-background-clip: text;
+    color: transparent;
+    margin-left: 34%;
+}
+
+.pag4 {
+    display: flex;
+    
+}
+
+
 /* FOOTER */
 
 
