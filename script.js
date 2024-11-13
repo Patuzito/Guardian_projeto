@@ -46,6 +46,7 @@ function mostrarSetaDepoisParar() {
 
 window.addEventListener('scroll', mostrarSetaDepoisParar);
 
+// Pagina 3 //
 
 function displayText(buttonNumber) {
     var videoPlayer = document.getElementById("videoPlayer");
@@ -66,3 +67,4 @@ function displayText(buttonNumber) {
 
     
 }
+
