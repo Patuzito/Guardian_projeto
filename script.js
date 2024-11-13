@@ -1,26 +1,4 @@
-// HEADER //
 
-let lastScrollTop = 0;
-const header = document.querySelector('.header');
-
-window.addEventListener('scroll', () => {
-    const currentScroll = window.pageYOffset;
-
-    if (lastScrollTop < currentScroll  ) {
-        // Esconde o header ao rolar para baixo
-        header.classList.add('visivel');
-    } else {
-        // Mostra o header ao rolar para cima
-        header.classList.remove('visivel');
-    }
-
-   
-
-
-    lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // Evita valores negativos
-})
-
-;
 
 // SETA //
 
@@ -58,20 +36,21 @@ function displayText(buttonNumber) {
     ];
 
     // Troca o vídeo com base no número do botão clicado
-    if (buttonNumber >= 1 && buttonNumber <= 3) {
+    if (buttonNumber >= 1 && buttonNumber <+ 3) {
         videoSource.src = videos[buttonNumber - 1];  // Atualiza o src do vídeo
         videoPlayer.load(); 
         videoPlayer.play();  
     }
-  var currentVideoIndex = 0;
+// Função para trocar os vídeos
+function changeVideo() {
+    // Atualiza o índice para o próximo vídeo, com um comportamento circular
+    currentVideoIndex = (currentVideoIndex + 1) % videos.length;  // Incrementa o índice para o próximo vídeo
+    videoSource.src = videos[currentVideoIndex];  // Atualiza o src do vídeo
+    videoPlayer.load();  // Recarrega o vídeo
+    videoPlayer.play();  // Reproduz o vídeo
+}
 
-    // Função para trocar os vídeos
-    function changeVideo() {
-        // Atualiza o vídeo para o próximo
-        currentVideoIndex = (currentVideoIndex + 1) % videos.length;  // Vai para o próximo vídeo (circular)
-        videoSource.src = videos[currentVideoIndex];  // Atualiza o src do vídeo
-        videoPlayer.load();  // Recarrega o vídeo
-        videoPlayer.play();  // Reproduz o vídeo
-    }
-    setInterval(changeVideo, 7000);
+// Chama a função a cada 5 segundos (5000 milissegundos)
+setInterval(changeVideo, 5000);
+
 }
