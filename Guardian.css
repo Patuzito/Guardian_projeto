@@ -1,0 +1,548 @@
+/* ==================================================
+    CONFIGURAÇÕES GERAIS
+================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #F6F6F6;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* ==================================================
+    HEADER
+================================================== */
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 80px;
+    z-index: 1000;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: top 0.3s ease;
+}
+
+.header.visivel {
+    top: -100px;
+}
+
+.header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logoIcon {
+    width: 100px;
+    margin-top: 7px;
+    margin-left: -25px;
+}
+
+#Header-Titlte {
+    color: #E82C2C;
+    font-size: 45px;
+    font-family: Arial;
+    font-weight: bold;
+    font-style: normal;
+    margin-bottom: 10px;
+    margin-left: -5px;
+}
+
+.btn-baixar {
+    background-color: #E82C2C;
+    color: white;
+    border: none;
+    padding: 10px 30px;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    box-shadow: 0px 3px 3px 2px #333;
+    transition: background-color 0.3s ease;
+}
+
+.btn-baixar:hover {
+    background-color: #870000;
+}
+
+/* ==================================================
+    PAGINA 1
+================================================== */
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 60px 20px;
+
+    gap: 40px;
+    align-items: center;
+    justify-content: center;
+}
+
+#Description {
+    font-size: 70px;
+    margin-top: -100px;
+}
+
+.text-section {
+    flex: 1;
+    max-width: 50%;
+}
+
+.text-section h2 {
+    font-size: 80px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.text-section .highlight {
+    color: #E82C2C;
+}
+
+.text-section p {
+    font-size: 23px;
+    color: #414141;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.btn-download {
+    background-color: #ff0000;
+    color: white;
+    border: none;
+    padding: 15px 28px;
+    font-size: 26px;
+    cursor: pointer;
+    border-radius: 9px;
+    margin-bottom: 10px;
+    box-shadow: 0px 5px 5px 5px #333;
+    transition: background-color 0.3s ease;
+}
+
+.btn-download:hover {
+    background-color: #870000;
+}
+
+.image-section {
+    flex: 1;
+    max-width: 50%;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.image-section img {
+    width: 100%;
+    max-width: 900px;
+    border-radius: 10px;
+    background-color: #E82C2C;
+    box-shadow: 10px 10px 10px 0px darkred;
+}
+
+.icon {
+    width: 20px;
+    height: auto;
+}
+
+#icon {
+    width: 20px;
+    height: auto;
+}
+
+/* ==================================================
+    ANIMAÇÕES
+================================================== */
+/* Quando o elemento estiver escondido, ele terá opacidade 0 e será deslocado */
+.hidden {
+    opacity: 0;
+    transform: translateY(20px);
+    visibility: hidden;
+    /* Não interfere no layout, mas fica invisível */
+    transition: opacity 0.6s ease, transform 0.6s ease, visibility 0s 0.6s;
+    /* Tempo para que a visibilidade mude após a animação */
+}
+
+/* Quando o elemento estiver visível, ele terá opacidade 1 e sem deslocamento */
+.visivel {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+    /* Torna o elemento visível no layout */
+    transition: opacity 0.6s ease, transform 0.6s ease, visibility 0s 0s;
+    /* Remove qualquer atraso para tornar o elemento visível instantaneamente */
+}
+
+/* Para o segundo conjunto de animação, usa-se visibilidade para ocultar e exibir */
+.hidden2 {
+    opacity: 0;
+    visibility: hidden;
+    /* Torna invisível mas mantém o espaço reservado no layout */
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease, visibility 0s 0.6s;
+    /* A visibilidade só muda após a animação */
+}
+
+.visivel2 {
+    display: flex;
+    /* Mostra o conteúdo com display flex */
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+    /* Torna visível imediatamente após a animação */
+    transition: opacity 0.6s ease, transform 0.6s ease, visibility 0s 0s;
+    /* Remove qualquer atraso para tornar o elemento visível instantaneamente */
+}
+
+
+/* ==================================================
+    SETA
+================================================== */
+.seta-baixo {
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-top: 25px solid #a80000;
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    animation: pulse 1.5s infinite;
+}
+
+.seta-baixo.visivel {
+    opacity: 1;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(10px);
+    }
+}
+
+/* ==================================================
+    PAGINA 2
+================================================== */
+.pag2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 60px 20px;
+}
+
+.box {
+    width: 900px;
+    height: 450px;
+    padding-bottom: 0%;
+    margin-left: 218px;
+    border-radius: 20px;
+    background-color: #E82C2C;
+    fill-opacity: 80%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.box1 {
+    background-color: #FF0000;
+    color: white;
+    width: 320px;
+    height: 150px;
+    border-radius: 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.box1:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.box1 img {
+    width: 110px;
+    height: auto;
+    margin-top: 20px;
+}
+
+.ContentBox1 {
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+.text-content {
+    flex: 1;
+}
+
+#content-title {
+    margin: 0;
+    margin-left: 30px;
+    margin-top: 25px;
+    font-size: 33px;
+}
+
+#content-text {
+    margin: 20px;
+    margin-top: 20px;
+    font-size: 21px;
+    text-align: justify;
+}
+
+#content-logo {
+    margin-left: 10px;
+    width: 130px;
+    height: auto;
+    margin-top: 40px;
+}
+
+#content-image {
+    width: 450px;
+    height: auto;
+    margin-left: 20px;
+    margin-top: 15px;
+    flex-shrink: 0;
+}
+
+
+/* ==================================================
+    PAGINA 3
+================================================== */
+
+
+
+.container3 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    gap: 20px;
+}
+
+.button-container3 {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+}
+
+.button3 {
+    background-color: #E82C2C;
+    width: 90%;
+    height: 80%;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.2s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    text-align: left;
+    align-items: center;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.imgpag3 {
+    max-width: 70px;
+    max-height: auto;
+    margin-right: 40px;
+    margin: 10px;
+}
+
+.button3:hover {
+    transform: scale(1.05);
+}
+
+.display-area3 {
+    max-width: 70%;
+    max-height: auto;
+    border: none;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
+    margin-left: 90px;
+
+}
+
+/* ==================================================
+    PAGINA 4
+================================================== */
+
+
+.pag4 h1 {
+    font-size: 48px;
+    background: linear-gradient(90.51deg, #FF0000 0.44%, #990000 57.02%);
+    -webkit-background-clip: text;
+    color: transparent;
+    margin-bottom: 30px;
+}
+
+.pag4 {
+    display: flex;
+    flex-direction: column;
+    margin-top: 60px;
+}
+
+.perg {
+    width: 80%;
+    height: 45px;
+    background-color: rgb(243, 220, 220);
+    color: black;
+    border-radius: 5px;
+    margin-left: 20px;
+    margin-right: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.perg i,
+h3 {
+    margin: 10px;
+}
+
+
+
+
+/* ==================================================
+    PAGINA FINAL
+================================================== */
+.conteudoF {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 90px 20px;
+}
+
+.textoFH1 {
+    color: #ff0000;
+    font-size: 86px;
+    font-weight: bold;
+}
+
+.textoFH2 {
+    font-size: 44px;
+    margin: 10px 0;
+    color: #414141;
+}
+
+.textoP1 {
+    font-size: 36px;
+    color: #414141;
+    max-width: 600px;
+    margin: 20px auto;
+    line-height: 1.5;
+}
+
+.btn-download2 {
+    background-color: #ff0000;
+    box-shadow: 6px 6px 2px 2px #333;
+    color: white;
+    border: none;
+    padding: 15px 28px;
+    font-size: 36px;
+    cursor: pointer;
+    border-radius: 9px;
+    margin-top: 20px;
+    margin-bottom: -15px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-download2:hover {
+    background-color: #870000;
+}
+
+/* ==================================================
+    FOOTER
+================================================== */
+footer {
+    background-color: #ff0000;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 14px;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 0;
+}
+
+.footer-links a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.footer-social a img {
+    margin-top: 5px;
+    width: 30px;
+    filter: invert(100%);
+}
+
+/* ==================================================
+    SCROLL
+================================================== */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #a80000;
+    border-radius: 0.5px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+}
+
+/* ==================================================
+    MEDIA QUERIE
+================================================== */
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .text-section h2 {
+        font-size: 40px;
+    }
+
+    .text-section p {
+        font-size: 16px;
+    }
+}
