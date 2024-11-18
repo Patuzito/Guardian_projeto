@@ -88,7 +88,6 @@ h4 {
 /* ==================================================
     PAGINA 1
 ================================================== */
-
 .content {
     display: flex;
     flex-wrap: wrap;
@@ -174,45 +173,34 @@ h4 {
 /* ==================================================
     ANIMAÇÕES
 ================================================== */
-/* Quando o elemento estiver escondido, ele terá opacidade 0 e será deslocado */
 .hidden {
     opacity: 0;
     transform: translateY(20px);
     visibility: hidden;
-    /* Não interfere no layout, mas fica invisível */
     transition: opacity 0.6s ease, transform 0.6s ease, visibility 0s 0.6s;
-    /* Tempo para que a visibilidade mude após a animação */
 }
 
-/* Quando o elemento estiver visível, ele terá opacidade 1 e sem deslocamento */
 .visivel {
     opacity: 1;
     transform: translateY(0);
     visibility: visible;
-    /* Torna o elemento visível no layout */
     transition: opacity 0.6s ease, transform 0.6s ease, visibility 0s 0s;
-    /* Remove qualquer atraso para tornar o elemento visível instantaneamente */
 }
 
-/* Para o segundo conjunto de animação, usa-se visibilidade para ocultar e exibir */
+
 .hidden2 {
     opacity: 0;
     visibility: hidden;
-    /* Torna invisível mas mantém o espaço reservado no layout */
     transform: translateY(20px);
     transition: opacity 0.6s ease, transform 0.6s ease, visibility 0s 0.6s;
-    /* A visibilidade só muda após a animação */
 }
 
 .visivel2 {
     display: flex;
-    /* Mostra o conteúdo com display flex */
     opacity: 1;
     transform: translateY(0);
     visibility: visible;
-    /* Torna visível imediatamente após a animação */
     transition: opacity 0.6s ease, transform 0.6s ease, visibility 0s 0s;
-    /* Remove qualquer atraso para tornar o elemento visível instantaneamente */
 }
 
 
@@ -340,9 +328,6 @@ h4 {
 /* ==================================================
     PAGINA 3
 ================================================== */
-
-
-
 .container3 {
     display: flex;
     justify-content: space-between;
@@ -399,8 +384,6 @@ h4 {
 /* ==================================================
     PAGINA 4
 ================================================== */
-
-
 .pag4 h1 {
     font-size: 48px;
     background: linear-gradient(90.51deg, #FF0000 0.44%, #990000 57.02%);

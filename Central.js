@@ -2,6 +2,7 @@
    FUNÇÕES
 ================================================== */
 
+
 function GetID(value) {
     return document.querySelector(value)
 }
@@ -9,6 +10,7 @@ function GetID(value) {
 /* ==================================================
    ANIMAÇÃO DE SCROLL
 ================================================== */
+
 
 const elements = document.querySelectorAll(".hidden");
 
@@ -106,8 +108,9 @@ function displayText(buttonNumber) {
 
 
 /* ==================================================
-    HEADER FIXO
+    HEADER
 ================================================== */
+
 
 let lastScrollTop = 0;
 const header = GetID('.header');
