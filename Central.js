@@ -49,7 +49,7 @@ const content = {
         title: "Ajuda com Software",
         text: "A ajuda com software oferece recursos como manuais, tutoriais e suporte técnico para auxiliar os usuários na resolução de problemas e no uso eficiente dos programas. Ela visa melhorar a experiência do usuário, Esse suporte é essencial para aumentar a produtividade e a satisfação.",
         logo: "Images/Guardian nome branco.png",
-        image: "Images/Guardian dedos soft 2.png"
+        image: "https://github.com/Patuzito/Guardian_projeto/blob/main/Imagens/Pag4/Guardian%20dedos%20soft%202.png"
     },
     3: {
         title: "Atualizações precisas",
