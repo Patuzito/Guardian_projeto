@@ -55,7 +55,7 @@ const content = {
         title: "Atualizações precisas",
         text: "Solucionamos As atualizações de software são essenciais para corrigir erros, melhorar a segurança e otimizar o desempenho do computador. Elas mantêm o sistema e os aplicativos atualizados, garantindo estabilidade e proteção contra vulnerabilidades. problemas simples até complexos.",
         logo: "Images/Guardian nome branco.png",
-        image: "Images/Guardian atualiza.png"
+        image: "https://github.com/Patuzito/Guardian_projeto/blob/main/Imagens/Pag4/Guardian%20atualiza.png"
     }
 };
 
