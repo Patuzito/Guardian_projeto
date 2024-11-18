@@ -43,7 +43,7 @@ const content = {
         title: "Ajuda com Hardware",
         text: "A ajuda com hardware é fundamental para solucionar problemas em dispositivos como computadores, substituição de peças e manutenção preventiva. Esse suporte é essencial para evitar transtornos eaumentar a durabilidade dos dispositivos, seja para usuários domésticos ou empresas.",
         logo: "Images/Guardian nome branco.png",
-        image: "Images/molier ilustrate.png"
+        image: "https://github.com/Patuzito/Guardian_projeto/blob/main/Imagens/Pag4/molier%20ilustrate.png"
     },
     2: {
         title: "Ajuda com Software",
