@@ -9,7 +9,7 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #F6F6F6;
+    background-color: #c4c2c2;
 }
 
 h1,
@@ -100,7 +100,7 @@ h4 {
 
 #Description {
     font-size: 70px;
-    margin-top: -100px;
+    
 }
 
 .text-section {
@@ -513,5 +513,129 @@ footer {
 }
 
 /* ==================================================
-    MEDIA QUERIE
+    ESTILOS RESPONSIVOS
 ================================================== */
+@media (max-width: 768px) {
+    /* Header */
+    .header nav {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    .logo {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .logoIcon {
+        width: 80px;
+        margin: 0;
+    }
+
+    #Header-Titlte {
+        font-size: 30px;
+        margin: 5px 0;
+    }
+
+    .btn-baixar {
+        font-size: 16px;
+        padding: 8px 20px;
+        margin-top: 10px;
+    }
+
+    /* Página 1 */
+    .content {
+        flex-direction: column;
+        padding: 40px 10px;
+    }
+
+    .text-section {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .text-section h2 {
+        font-size: 36px;
+    }
+
+    .text-section p {
+        font-size: 18px;
+    }
+
+    .btn-download {
+        font-size: 18px;
+        padding: 10px 20px;
+    }
+
+    .image-section {
+        max-width: 100%;
+    }
+
+    .image-section img {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    /* Página 2 */
+    .box1 {
+        width: 100%;
+        height: auto;
+        margin-bottom: 20px;
+    }
+
+    .box {
+        width: 100%;
+        margin: 20px auto;
+    }
+
+    /* Página 3 */
+    .container3 {
+        flex-direction: column;
+    }
+
+    .button-container3 {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .button3 {
+        width: 100%;
+        text-align: center;
+    }
+
+    #videoPlayer {
+        width: 100%;
+    }
+
+    /* Página Final */
+    .conteudofinal {
+        text-align: center;
+    }
+
+    .logoF {
+        width: 80px;
+        margin-bottom: 20px;
+    }
+
+    .btn-download2 {
+        font-size: 18px;
+        padding: 10px 20px;
+    }
+
+    /* Footer */
+    .footer-links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-links a {
+        margin-bottom: 10px;
+    }
+
+    .footer-social {
+        margin-top: 20px;
+    }
+}
