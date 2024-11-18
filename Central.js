@@ -42,20 +42,20 @@ const content = {
     1: {
         title: "Ajuda com Hardware",
         text: "A ajuda com hardware é fundamental para solucionar problemas em dispositivos como computadores, substituição de peças e manutenção preventiva. Esse suporte é essencial para evitar transtornos eaumentar a durabilidade dos dispositivos, seja para usuários domésticos ou empresas.",
-        logo: "https://github.com/Patuzito/Guardian_projeto/blob/main/Imagens/Pag4/Guardian%20nome%20branco.png",
-        image: "https://github.com/Patuzito/Guardian_projeto/blob/main/Imagens/Pag4/molier%20ilustrate.png"
+        logo: "https://github.com/Patuzito/Guardian_projeto/blob/main/Imagens/Pag4/Guardian%20nome%20branco.png?raw=true",
+        image: "https://github.com/Patuzito/Guardian_projeto/blob/main/Imagens/Pag4/molier%20ilustrate.png?raw=true"
     },
     2: {
         title: "Ajuda com Software",
         text: "A ajuda com software oferece recursos como manuais, tutoriais e suporte técnico para auxiliar os usuários na resolução de problemas e no uso eficiente dos programas. Ela visa melhorar a experiência do usuário, Esse suporte é essencial para aumentar a produtividade e a satisfação.",
-        logo: "https://github.com/Patuzito/Guardian_projeto/blob/main/Imagens/Pag4/Guardian%20nome%20branco.png",
-        image: "https://github.com/Patuzito/Guardian_projeto/blob/main/Imagens/Pag4/Guardian%20dedos%20soft%202.png"
+        logo: "https://github.com/Patuzito/Guardian_projeto/blob/main/Imagens/Pag4/Guardian%20nome%20branco.png?raw=true",
+        image: "https://github.com/Patuzito/Guardian_projeto/blob/main/Imagens/Pag4/Guardian%20dedos%20soft%202.png?raw=true"
     },
     3: {
         title: "Atualizações precisas",
         text: "Solucionamos As atualizações de software são essenciais para corrigir erros, melhorar a segurança e otimizar o desempenho do computador. Elas mantêm o sistema e os aplicativos atualizados, garantindo estabilidade e proteção contra vulnerabilidades. problemas simples até complexos.",
-        logo: "https://github.com/Patuzito/Guardian_projeto/blob/main/Imagens/Pag4/Guardian%20nome%20branco.png",
-        image: "https://github.com/Patuzito/Guardian_projeto/blob/main/Imagens/Pag4/Guardian%20atualiza.png"
+        logo: "https://github.com/Patuzito/Guardian_projeto/blob/main/Imagens/Pag4/Guardian%20nome%20branco.png?raw=true",
+        image: "https://github.com/Patuzito/Guardian_projeto/blob/main/Imagens/Pag4/Guardian%20atualiza.png?raw=true"
     }
 };
 
