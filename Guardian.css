@@ -9,7 +9,7 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #c4c2c2;
+    background-color: #dfdfdf;
 }
 
 h1,
@@ -160,13 +160,18 @@ h4 {
     box-shadow: 10px 10px 10px 0px darkred;
 }
 
+.disponivel-em {
+    font-size: 19px;
+}
+
 .icon {
-    width: 20px;
+    margin-top: 5px;
+    width: 25px;
     height: auto;
 }
 
 #icon {
-    width: 20px;
+    width: 25px;
     height: auto;
 }
 
@@ -247,6 +252,7 @@ h4 {
     align-items: center;
     gap: 20px;
     padding: 60px 20px;
+    margin-bottom: 70px;
 }
 
 .box {
@@ -334,6 +340,7 @@ h4 {
     align-items: center;
     width: 100%;
     gap: 20px;
+
 }
 
 .button-container3 {
@@ -357,6 +364,10 @@ h4 {
     align-items: center;
     font-size: 15px;
     font-weight: bold;
+}
+
+.highlight3 {
+    color: #E82C2C;
 }
 
 .imgpag3 {
@@ -396,18 +407,20 @@ h4 {
     display: flex;
     flex-direction: column;
     margin-top: 60px;
+    margin-bottom: -30px;
 }
 
 .perg {
     width: 80%;
     height: 45px;
-    background-color: rgb(243, 220, 220);
-    color: black;
+    background-color: #E82C2C;
+    color: white;
     border-radius: 5px;
     margin-left: 20px;
     margin-right: 20px;
     display: flex;
     justify-content: space-between;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .perg i,
@@ -427,6 +440,11 @@ h3 {
     align-items: center;
     text-align: center;
     padding: 90px 20px;
+}
+
+.LogoF {
+    margin-top: -60px;
+    margin-bottom: -40px;
 }
 
 .textoFH1 {
@@ -476,7 +494,7 @@ footer {
     text-align: center;
     padding: 20px 0;
     font-size: 14px;
-    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 100px 100px rgba(99, 6, 6, 0.1);
     margin-bottom: 0;
 }
 
@@ -512,130 +530,3 @@ footer {
     background-color: #f1f1f1;
 }
 
-/* ==================================================
-    ESTILOS RESPONSIVOS
-================================================== */
-@media (max-width: 768px) {
-    /* Header */
-    .header nav {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 10px;
-    }
-
-    .logo {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
-    .logoIcon {
-        width: 80px;
-        margin: 0;
-    }
-
-    #Header-Titlte {
-        font-size: 30px;
-        margin: 5px 0;
-    }
-
-    .btn-baixar {
-        font-size: 16px;
-        padding: 8px 20px;
-        margin-top: 10px;
-    }
-
-    /* Página 1 */
-    .content {
-        flex-direction: column;
-        padding: 40px 10px;
-    }
-
-    .text-section {
-        max-width: 100%;
-        text-align: center;
-    }
-
-    .text-section h2 {
-        font-size: 36px;
-    }
-
-    .text-section p {
-        font-size: 18px;
-    }
-
-    .btn-download {
-        font-size: 18px;
-        padding: 10px 20px;
-    }
-
-    .image-section {
-        max-width: 100%;
-    }
-
-    .image-section img {
-        width: 100%;
-        max-width: 300px;
-    }
-
-    /* Página 2 */
-    .box1 {
-        width: 100%;
-        height: auto;
-        margin-bottom: 20px;
-    }
-
-    .box {
-        width: 100%;
-        margin: 20px auto;
-    }
-
-    /* Página 3 */
-    .container3 {
-        flex-direction: column;
-    }
-
-    .button-container3 {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    .button3 {
-        width: 100%;
-        text-align: center;
-    }
-
-    #videoPlayer {
-        width: 100%;
-    }
-
-    /* Página Final */
-    .conteudofinal {
-        text-align: center;
-    }
-
-    .logoF {
-        width: 80px;
-        margin-bottom: 20px;
-    }
-
-    .btn-download2 {
-        font-size: 18px;
-        padding: 10px 20px;
-    }
-
-    /* Footer */
-    .footer-links {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .footer-links a {
-        margin-bottom: 10px;
-    }
-
-    .footer-social {
-        margin-top: 20px;
-    }
-}
