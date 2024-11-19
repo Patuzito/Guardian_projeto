@@ -352,7 +352,7 @@ h4 {
 
 .button3 {
     background-color: #E82C2C;
-    width: 90%;
+    width: 70%;
     height: 80%;
     color: white;
     border-radius: 10px;
@@ -393,7 +393,9 @@ h4 {
 }
 
 .Icons{
-    margin-left: 90px;
+    margin-left: 110px;
+    margin-top: 50px;
+    
     
 }
 
