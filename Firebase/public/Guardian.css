@@ -332,6 +332,8 @@ h4 {
 }
 
 
+
+
 /* ==================================================
     PAGINA 3
 ================================================== */
@@ -383,7 +385,7 @@ h4 {
 }
 
 .display-area3 {
-    max-width: 70%;
+    max-width: 90%;
     max-height: auto;
     border: none;
     overflow: hidden;
@@ -398,6 +400,17 @@ h4 {
     margin-top: 50px;
     
     
+}
+
+.video-player {
+    transition: opacity 0.1s ease-in-out;
+    opacity: 1;
+}
+
+.video-container {
+    position: relative;
+    width: 600px;
+    margin: 20px auto;
 }
 
 /* ==================================================

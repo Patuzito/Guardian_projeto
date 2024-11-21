@@ -72,39 +72,40 @@ Buttons.forEach((Button, index) => {
 });
 
 
+
 /* ==================================================
    PAGINA 3
 ================================================== */
 
+// Array para armazenar os vídeos
+var videos = [
+    "https://github.com/Patuzito/Guardian_projeto/raw/refs/heads/main/Firebase/public/Videos/video1.mp4",
+    "https://github.com/Patuzito/Guardian_projeto/raw/refs/heads/main/Firebase/public/Videos/video1.mp4",
+    "https://github.com/Patuzito/Guardian_projeto/raw/refs/heads/main/Firebase/public/Videos/video1.mp4"
+];
 
+// Função para trocar o vídeo com animação de desaparecer e aparecer
 function displayText(buttonNumber) {
     var videoPlayer = document.getElementById("videoPlayer");
     var videoSource = document.getElementById("videoSource");
 
-    var videos = [
-        "https://raw.githubusercontent.com/Patuzito/Guardian_projeto/main/Videos/video1.mp4",
-        "https://raw.githubusercontent.com/Patuzito/Guardian_projeto/main/Videos/video2.mp4",
-        "https://raw.githubusercontent.com/Patuzito/Guardian_projeto/main/Videos/video3.mp4"
-    ];
+    // Desaparece o vídeo atual
+    videoPlayer.style.opacity = 0;
 
-    if (buttonNumber >= 1 && buttonNumber < + 3) {
+    // Atraso para dar tempo de desaparecer o vídeo
+    setTimeout(function() {
+        // Altera o source do vídeo
         videoSource.src = videos[buttonNumber - 1];
-        videoPlayer.load();
-        videoPlayer.play();
-    }
-    // Função para trocar os vídeos
-    function changeVideo() {
-        currentVideoIndex = (currentVideoIndex + 1) % videos.length;  // Incrementa o índice para o próximo vídeo
-        videoSource.src = videos[currentVideoIndex];  // Atualiza o src do vídeo
         videoPlayer.load();  // Recarrega o vídeo
-        videoPlayer.play();  // Reproduz o vídeo
-    }
+        videoPlayer.play();  // Começa a reprodução do vídeo
 
-    // Chama a função a cada 5 segundos (5000 milissegundos)
-    setInterval(changeVideo, 5000);
-
-
+        // Volta a aparecer o vídeo com fade-in
+        videoPlayer.style.opacity = 1;
+    }, 0.1);  // Tempo de atraso de 1 segundo para coincidir com a duração do fade-out
 }
+
+
+
 
 
 /* ==================================================
