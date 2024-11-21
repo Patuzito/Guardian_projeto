@@ -462,14 +462,39 @@ h4 {
     display: flex;
     justify-content: space-between;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    transition: height 0.3s ease-out;
 }
 
-.perg i,
-h3 {
+.perg.active {
+    background-color: #E82C2C;
+}
+
+.perg i {
     margin: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease-out;
+
+}
+
+.perg h3 {
+    margin: 10px;
+    transition: transform 0.3s ease-out;
 }
 
 
+.text-hidden {
+    display: none;
+    font-size: 16px;
+    color: white;
+    margin-top: 10px;
+    text-align: center;
+    transition: opacity 0.3s ease-out;
+}
+
+.perg.active .text-hidden {
+    opacity: 1;
+}
 
 
 /* ==================================================

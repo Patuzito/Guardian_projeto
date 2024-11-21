@@ -157,8 +157,48 @@ function mostrarSetaDepoisParar() {
 
 window.addEventListener('scroll', mostrarSetaDepoisParar);
 
+/* ==================================================
+    PAGINA 4
+================================================== */
 
-// MODOESCURO
+const perguntas = document.querySelectorAll('.perg');
+
+perguntas.forEach(pergunta => {
+    pergunta.addEventListener('click', () => {
+        const seta = pergunta.querySelector('i');
+        const resposta = pergunta.querySelector('.text-hidden');
+
+        if (pergunta.classList.contains('active')) {
+            // Fecha a caixa
+            pergunta.classList.remove('active');
+            seta.style.transform = "rotate(0deg)";
+            pergunta.style.height = '45px';
+            resposta.style.display = 'none'; 
+        } else {
+            // Fecha todas as outras perguntas
+            perguntas.forEach(p => {
+                p.classList.remove('active');
+                const icon = p.querySelector('i');
+                const text = p.querySelector('.text-hidden');
+                p.style.height = '45px';
+                if (icon) icon.style.transform = "rotate(0deg)";
+                if (text) text.style.display = 'none';
+            });
+
+            // Abre a pergunta clicada
+            pergunta.classList.add('active');
+            seta.style.transform = "rotate(180deg)";
+            pergunta.style.height = '150px';
+            resposta.style.display = 'block';
+    }
+
+})
+});
+
+
+/* ==================================================
+    MODO ESCURO
+================================================== */
 
 const chk = document.getElementById('chk');
 
