@@ -13,7 +13,7 @@
     <meta http-equiv="Strict-Transport-Security" content="max-age=31536000">
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
     <meta name="referrer" content="no-referrer-when-downgrade">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Guardian</title>
     <link rel="stylesheet" href="Guardian.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
@@ -35,7 +35,18 @@
             </div>
             <!-- Botão para download -->
             <button class="btn-baixar">Baixar</button>
+
+            <div>
+                <input type="checkbox" class="checkbox" id="chk"/>
+                <label class="label" for="chk">
+                    <i class="fa-solid fa-moon"></i>
+                <i class="fa-solid fa-sun"></i>
+                <div class="ball"></div>
+                </label>
+            </div>
         </nav>
+
+        
     </header>
 
     <!-- ==================================================
@@ -55,10 +66,8 @@
 
             <!-- Ícones de disponibilidade -->
             <h6 class="disponivel-em"> Disponível em:
-                <img class="icon"
-                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAQVJREFUSEvVldsNgkAQRS+daCdaiVqJWolaiXaiVqKcZNeAO/sUPpyEEGAzZ+bOg04zWzezf/0COEjaSFqmgmwFXCWtJJ0l7aYGnCRtndN1D7pNDbj3kS9c5GSQtJxEOEIKzDtDe6J+uEy4R0EpwFAKHyXOuDx0+P7SPwAfWQzgi5hT4Ps7HUUAH7MAFJDoa80suAWwpMnBou1qAXyX5JwOvx8t/TlgAV41nt3ZKkBLgWlbahDYVDXAcXGRW7uI9gxmwcqA6aXQLRZIFRu01iwCmWIAsqDY3EvNLHRqF9VIhf7mj6dkm+7dciPCp9ukwPmbsfSYASZ5tIN82jlAqTzRc/8PeANiHjAZwuLguwAAAABJRU5ErkJggg==" />
-                <img class="icon"
-                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAQxJREFUSEvtlIEJwkAMRX8nUSfRTdRJ1EnUSdRJdBT7oF/aenc5kIKCgaI9Y14uP0mjia2ZOL6+ArCSxLMf3Zb3a/dkC1F7g7uks6SZpLmkm6R1e7aISlwDIPtLJhCARwkSAciW7CkFoL75rAiJANR5F5ThkNDn9ZccgMwxgvt7joMeJMINudXAUgBnjTPBIwAa4LuRtG39T31CCnDsnC1eDYCY+BEcSLFEf8CkJXpr2ZTIiEV7shrQo0ZkAi8l8TmY7GjQLHhp1giY3UkRgMD0NyDMPc4Z9tb3NYM29vE+4pwSeML5/HjZeYBYeAZQEt8orEDo0AX2unYL8s56GLRkSqhaQEnk4m+/D3gC0LI9GeHqcucAAAAASUVORK5CYII=" />
+                <i class="fa-brands fa-android" ></i>
+                <i class="fa-brands fa-apple"></i>
             </h6>
         </div>
 
@@ -125,7 +134,7 @@
             <div id="displayArea3">
                 <video id="videoPlayer" class="display-area3">
                     <source id="videoSource"
-                        src="https://raw.githubusercontent.com/Patuzito/Guardian_projeto/main/Firebase/public/Videos/video1.mp4"
+                        src=""
                         type="video/mp4">
                     Seu navegador não suporta o vídeo.
                 </video>
@@ -235,6 +244,7 @@
                     src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAXJJREFUSEvFlc1NRDEMhGeb4ApUAly4UwASVAJI9AGUwQmohJ8DdypY3oc8T1aSzWaFnjaX/YntscdjZ6WFz2rh+NobwJGkK0knkk47VX7E3auku8nHv2eXVgUEfggLHHDuHZIhCWyfJsPbbFwCYPweQc926A9+L2F/nZMqAcicCo5b5TYAL4OaH0kXreRKALKn1Fb2AJPp4XT/Nn1/lHQu6VnSV/zvKmb/EmAdjpTpQ1AqK5tNIveSviUdBP8AYA8Df2cEACeCoxIaaIXdRLVzsEiESue42wCsKAfPbfAddFhp7mEXIAfrNd2Ka9kPA0AJVGxSFT37FwDc04MWRQZHECiKM0QRxlaRFcSnpzQ3Ge6zpHcGIKueTAme989WgGpQonTvG5bfZwQ1LVlZ1aC2VgW8l5mNrCWrKlNcDZqNvC6q9bsBKdOY56L54HiA8q4fWdfYZEU1V0XeP+jf3PcA/Gagsurt2NuTOdLUIZvFK/gFHzRoGdyhE9oAAAAASUVORK5CYII=" />
             </a>
         </div>
+        
     </footer>
 
     <!-- ==================================================
@@ -246,7 +256,7 @@
         JAVASCRIPT 
     ================================================== -->
     <script src="Central.js"></script>
-
+    <script src="https://kit.fontawesome.com/d777240dff.js" crossorigin="anonymous"></script>
 </body>
 
 </html>
