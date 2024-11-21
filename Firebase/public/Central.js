@@ -101,7 +101,7 @@ function displayText(buttonNumber) {
 
         // Volta a aparecer o vídeo com fade-in
         videoPlayer.style.opacity = 1;
-    }, 0.1);  // Tempo de atraso de 1 segundo para coincidir com a duração do fade-out
+    }, 0);  // Tempo de atraso de 1 segundo para coincidir com a duração do fade-out
 }
 
 
@@ -156,3 +156,42 @@ function mostrarSetaDepoisParar() {
 }
 
 window.addEventListener('scroll', mostrarSetaDepoisParar);
+
+
+// MODOESCURO
+
+const chk = document.getElementById('chk');
+
+chk.addEventListener('change', () => {
+    // Se o checkbox for marcado, ativa o modo escuro
+    if (chk.checked) {
+        document.body.classList.add('dark');
+        document.documentElement.style.setProperty('--blacktext', '#fff');  
+        document.documentElement.style.setProperty('--Whitebackground', '#252323'); 
+        document.documentElement.style.setProperty('--headerwhite', '#312F2F'); 
+    } else {
+        // Se o checkbox não estiver marcado, ativa o modo claro
+        document.body.classList.remove('dark');
+        document.documentElement.style.setProperty('--blacktext', '#000');  
+        document.documentElement.style.setProperty('--Whitebackground', '#fff'); 
+        document.documentElement.style.setProperty('--headerwhite', '#fff');  
+    }
+});
+
+window.addEventListener('DOMContentLoaded', () => {
+    const savedTheme = localStorage.getItem('theme');
+    
+    if (savedTheme === 'dark') {
+        chk.checked = true;
+        document.body.classList.add('dark');
+        document.documentElement.style.setProperty('--blacktext', '#fff');
+        document.documentElement.style.setProperty('--Whitebackground', '#333');
+        document.documentElement.style.setProperty('--headerwhite', '#0000');
+    } else {
+        chk.checked = false;
+        document.body.classList.remove('dark');
+        document.documentElement.style.setProperty('--blacktext', '#000');
+        document.documentElement.style.setProperty('--Whitebackground', '#fff');
+        document.documentElement.style.setProperty('--headerwhite', '#fff');
+    }
+});
