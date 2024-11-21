@@ -186,11 +186,6 @@ h4 {
     height: auto;
 }
 
-.fa-brands {
-    
-
-    
-}
 
 #icon {
     width: 25px;
@@ -376,7 +371,7 @@ h4 {
 
 .button3 {
     background-color: #E82C2C;
-    width: 70%;
+    width: 80%;
     height: 80%;
     color: var(--Whitetext);
     border-radius: 10px;
@@ -407,8 +402,7 @@ h4 {
 }
 
 .display-area3 {
-    max-width: 90%;
-    max-height: auto;
+    width: 800px;
     border: none;
     overflow: hidden;
     border-radius: 20px;

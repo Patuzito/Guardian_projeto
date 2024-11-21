@@ -178,6 +178,7 @@ chk.addEventListener('change', () => {
     }
 });
 
+// Garantir que o modo seja o correto ao carregar a página (salvando a preferência no localStorage)
 window.addEventListener('DOMContentLoaded', () => {
     const savedTheme = localStorage.getItem('theme');
     
