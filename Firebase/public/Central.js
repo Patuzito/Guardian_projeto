@@ -167,26 +167,26 @@ accordians.forEach(accordian => {
 
     accordian.addEventListener('click', () => {
         if (accordian.classList.contains('active')) {
-            // Fecha o accordian ativo
+            
             accordian.classList.remove('active');
             icon.style.transform = "rotate(0deg)";
-            accordian.style.height = '50px'; // Ajuste conforme o design
+            accordian.style.height = '50px';
             answer.style.maxHeight = null;
         } else {
-            // Fecha todos os outros accordians
+            
             accordians.forEach(a => {
                 a.classList.remove('active');
                 const otherIcon = a.querySelector('i');
                 const otherAnswer = a.querySelector('.answer');
-                a.style.height = '50px'; // Ajuste conforme o design
+                a.style.height = '50px'; 
                 if (otherIcon) otherIcon.style.transform = "rotate(0deg)";
                 if (otherAnswer) otherAnswer.style.maxHeight = null;
             });
 
-            // Abre o accordian clicado
+           
             accordian.classList.add('active');
             icon.style.transform = "rotate(180deg)";
-            accordian.style.height = (answer.scrollHeight + 50) + 'px'; // Ajuste a altura somando o necessário
+            accordian.style.height = (answer.scrollHeight + 50) + 'px';
             answer.style.maxHeight = answer.scrollHeight + 'px';
         }
     });
