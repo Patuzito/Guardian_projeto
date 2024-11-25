@@ -79,9 +79,7 @@ Buttons.forEach((Button, index) => {
 
 // Array para armazenar os vídeos
 var videos = [
-    "https://github.com/Patuzito/Guardian_projeto/raw/refs/heads/main/Firebase/public/Videos/video1.mp4",
-    "https://github.com/Patuzito/Guardian_projeto/raw/refs/heads/main/Firebase/public/Videos/video1.mp4",
-    "https://github.com/Patuzito/Guardian_projeto/raw/refs/heads/main/Firebase/public/Videos/video1.mp4"
+    
 ];
 
 // Função para trocar o vídeo com animação de desaparecer e aparecer
