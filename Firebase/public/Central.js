@@ -161,38 +161,37 @@ window.addEventListener('scroll', mostrarSetaDepoisParar);
     PAGINA 4
 ================================================== */
 
-const perguntas = document.querySelectorAll('.perg');
+const accordians = document.querySelectorAll('.accordian');
 
-perguntas.forEach(pergunta => {
-    pergunta.addEventListener('click', () => {
-        const seta = pergunta.querySelector('i');
-        const resposta = pergunta.querySelector('.text-hidden');
+accordians.forEach(accordian => {
+    const icon = accordian.querySelector('i');
+    const answer = accordian.querySelector('.answer');
 
-        if (pergunta.classList.contains('active')) {
-            // Fecha a caixa
-            pergunta.classList.remove('active');
-            seta.style.transform = "rotate(0deg)";
-            pergunta.style.height = '45px';
-            resposta.style.display = 'none'; 
+    accordian.addEventListener('click', () => {
+        if (accordian.classList.contains('active')) {
+            // Fecha o accordian ativo
+            accordian.classList.remove('active');
+            icon.style.transform = "rotate(0deg)";
+            accordian.style.height = '50px'; // Ajuste conforme o design
+            answer.style.maxHeight = null;
         } else {
-            // Fecha todas as outras perguntas
-            perguntas.forEach(p => {
-                p.classList.remove('active');
-                const icon = p.querySelector('i');
-                const text = p.querySelector('.text-hidden');
-                p.style.height = '45px';
-                if (icon) icon.style.transform = "rotate(0deg)";
-                if (text) text.style.display = 'none';
+            // Fecha todos os outros accordians
+            accordians.forEach(a => {
+                a.classList.remove('active');
+                const otherIcon = a.querySelector('i');
+                const otherAnswer = a.querySelector('.answer');
+                a.style.height = '50px'; // Ajuste conforme o design
+                if (otherIcon) otherIcon.style.transform = "rotate(0deg)";
+                if (otherAnswer) otherAnswer.style.maxHeight = null;
             });
 
-            // Abre a pergunta clicada
-            pergunta.classList.add('active');
-            seta.style.transform = "rotate(180deg)";
-            pergunta.style.height = '150px';
-            resposta.style.display = 'block';
-    }
-
-})
+            // Abre o accordian clicado
+            accordian.classList.add('active');
+            icon.style.transform = "rotate(180deg)";
+            accordian.style.height = (answer.scrollHeight + 50) + 'px'; // Ajuste a altura somando o necessário
+            answer.style.maxHeight = answer.scrollHeight + 'px';
+        }
+    });
 });
 
 
