@@ -13,7 +13,9 @@
     <meta http-equiv="Strict-Transport-Security" content="max-age=31536000">
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
     <meta name="referrer" content="no-referrer-when-downgrade">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+        integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Guardian</title>
     <link rel="stylesheet" href="Guardian.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
@@ -38,16 +40,16 @@
             <button class="btn-baixar">Baixar</button>
 
             <div>
-                <input type="checkbox" class="checkbox" id="chk"/>
+                <input type="checkbox" class="checkbox" id="chk" />
                 <label class="label" for="chk">
                     <i class="fa-solid fa-moon"></i>
-                <i class="fa-solid fa-sun"></i>
-                <div class="ball"></div>
+                    <i class="fa-solid fa-sun"></i>
+                    <div class="ball"></div>
                 </label>
             </div>
         </nav>
 
-        
+
     </header>
 
     <!-- ==================================================
@@ -59,16 +61,18 @@
             <h2 id="Description"><span class="highlight">Sua satisfação</span> é a nossa motivação.</h2>
             <h3>Com um assistente inteligente</h3>
             <p>
-                Na Guardian, temos orgulho de apresentar nosso aplicativo, desenvolvido para oferecer suporte a pessoas que enfrentam problemas com seus computadores, sejam de hardware ou software.
+                Na Guardian, temos orgulho de apresentar nosso aplicativo, desenvolvido para oferecer suporte a pessoas
+                que enfrentam problemas com seus computadores, sejam de hardware ou software.
 
-                Com uma interface intuitiva e ferramentas poderosas, nosso aplicativo foi projetado para diagnosticar e solucionar uma ampla gama de problemas técnicos, de forma rápida e eficaz.
+                Com uma interface intuitiva e ferramentas poderosas, nosso aplicativo foi projetado para diagnosticar e
+                solucionar uma ampla gama de problemas técnicos, de forma rápida e eficaz.
             </p>
             <!-- Botão de download gratuito -->
             <button class="btn-download">Download Grátis</button>
 
             <!-- Ícones de disponibilidade -->
             <h6 class="disponivel-em"> Disponível em:
-                <i class="fa-brands fa-android" ></i>
+                <i class="fa-brands fa-android"></i>
                 <i class="fa-brands fa-apple"></i>
             </h6>
         </div>
@@ -135,9 +139,7 @@
             <!-- Vídeo explicativo -->
             <div id="displayArea3">
                 <video id="videoPlayer" class="display-area3">
-                    <source id="videoSource"
-                        src=""
-                        type="video/mp4">
+                    <source id="videoSource" src="" type="video/mp4">
                     Seu navegador não suporta o vídeo.
                 </video>
             </div>
@@ -179,28 +181,73 @@
     <section class="hidden">
         <main class="content pag4">
             <h1>Perguntas Frequentes</h1>
-            <div class="perg" id="perg1">
-                <h3>O que é o Guardian? </h3><i class='bx bxs-chevron-down' style="font-size: 25px;"></i>
+            <div class="accordian">
+                <div class="question">
+                    <h3>O que é o Guardian?</h3>
+                    <i class='bx bxs-chevron-down icon' style="font-size: 25px;"></i>
+                </div>
+                <div class="answer">
+                    <h4>O Guardian é um site que oferece soluções e tutoriais para a manutenção de desktops e laptops,
+                        facilitando o cuidado de dispositivos com dicas práticas e acessíveis. Ideal para quem busca
+                        suporte técnico simples e eficaz.</h4>
+                </div>
             </div>
-            <div class="perg" id="perg2">
-                <h3>O Guardian oferece tutoriais gratuitos?</h3><i class='bx bxs-chevron-down'
-                    style="font-size: 25px;"></i>
+
+            <div class="accordian">
+                <div class="question">
+                    <h3>O Guardian oferece tutoriais gratuitos?</h3>
+                    <i class='bx bxs-chevron-down icon' style="font-size: 25px;"></i>
+                </div>
+                <div class="answer">
+                    <h4>O Guardian oferece tutoriais gratuitos para ajudar na manutenção de desktops e laptops,
+                        facilitando o acesso a soluções práticas.</h4>
+                </div>
             </div>
-            <div class="perg" id="perg3">
-                <h3>Como funciona o suporte técnico oferecido pela Guardian?</h3><i class='bx bxs-chevron-down'
-                    style="font-size: 25px;"></i>
+
+            <div class="accordian">
+                <div class="question">
+                    <h3>Como funciona o suporte técnico oferecido pela Guardian?</h3>
+                    <i class='bx bxs-chevron-down icon' style="font-size: 25px;"></i>
+                </div>
+                <div class="answer">
+                    <h4>O suporte técnico da Guardian fornece tutoriais detalhados para resolver problemas de hardware e
+                        software. Oferece soluções simples e acessíveis, com guias passo a passo.</h4>
+                </div>
             </div>
-            <div class="perg" id="perg4">
-                <h3>O que acontece se meu problema não for resolvido por meio de atendimento online? </h3><i
-                    class='bx bxs-chevron-down' style="font-size: 25px;"></i>
+
+            <div class="accordian">
+                <div class="question">
+                    <h3>O que acontece se meu problema não for resolvido por meio de atendimento online?</h3>
+                    <i class='bx bxs-chevron-down icon' style="font-size: 25px;"></i>
+                </div>
+                <div class="answer">
+                    <h4>Se o seu problema não for resolvido por meio do atendimento online no Guardian, o site pode
+                        orientar você a procurar suporte especializado ou fornecer informações sobre assistência local.
+                    </h4>
+                </div>
             </div>
-            <div class="perg" id="perg5">
-                <h3>Como posso agendar uma consulta ou atendimento técnico pelo Guardian?</h3><i
-                    class='bx bxs-chevron-down' style="font-size: 25px;"></i>
+
+            <div class="accordian">
+                <div class="question">
+                    <h3>Como posso agendar uma consulta ou atendimento técnico pelo Guardian?</h3>
+                    <i class='bx bxs-chevron-down icon' style="font-size: 25px;"></i>
+                </div>
+                <div class="answer">
+                    <h4>Para agendar uma consulta ou atendimento técnico pelo Guardian via Instagram, basta acessar o
+                        perfil oficial, enviar uma mensagem, informando seu nome e o tipo de atendimento desejado.</h4>
+                </div>
             </div>
-            <div class="perg" id="perg6">
-                <h3>Posso utilizar o Guardian para fazer upgrades no meu desktop ou laptop?</h3><i
-                    class='bx bxs-chevron-down' style="font-size: 25px;"></i>
+
+            <div class="accordian">
+                <div class="question">
+                    <h3>Posso utilizar o Guardian para fazer upgrades no meu desktop ou laptop?</h3>
+                    <i class='bx bxs-chevron-down icon' style="font-size: 25px;"></i>
+                </div>
+                <div class="answer">
+                    <h4>Sim, o Guardian pode ajudar com upgrades em desktops e laptops, oferecendo diagnóstico,
+                        recomendação de componentes e instalação. Eles também orientam sobre a compatibilidade das
+                        peças.</h4>
+                </div>
             </div>
 
         </main>
@@ -246,7 +293,7 @@
                     src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAXJJREFUSEvFlc1NRDEMhGeb4ApUAly4UwASVAJI9AGUwQmohJ8DdypY3oc8T1aSzWaFnjaX/YntscdjZ6WFz2rh+NobwJGkK0knkk47VX7E3auku8nHv2eXVgUEfggLHHDuHZIhCWyfJsPbbFwCYPweQc926A9+L2F/nZMqAcicCo5b5TYAL4OaH0kXreRKALKn1Fb2AJPp4XT/Nn1/lHQu6VnSV/zvKmb/EmAdjpTpQ1AqK5tNIveSviUdBP8AYA8Df2cEACeCoxIaaIXdRLVzsEiESue42wCsKAfPbfAddFhp7mEXIAfrNd2Ka9kPA0AJVGxSFT37FwDc04MWRQZHECiKM0QRxlaRFcSnpzQ3Ge6zpHcGIKueTAme989WgGpQonTvG5bfZwQ1LVlZ1aC2VgW8l5mNrCWrKlNcDZqNvC6q9bsBKdOY56L54HiA8q4fWdfYZEU1V0XeP+jf3PcA/Gagsurt2NuTOdLUIZvFK/gFHzRoGdyhE9oAAAAASUVORK5CYII=" />
             </a>
         </div>
-        
+
     </footer>
 
     <!-- ==================================================

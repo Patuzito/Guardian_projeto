@@ -456,48 +456,52 @@ h4 {
     margin-bottom: -30px;
 }
 
-.perg {
-    width: 80%;
-    height: 45px;
+.accordian {
     background-color: #E82C2C;
     color: var(--Whitetext);
+    width: 80%;
+    height: auto;
     border-radius: 5px;
-    margin-left: 20px;
-    margin-right: 20px;
-    display: flex;
-    justify-content: space-between;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    overflow: hidden;
+    cursor: pointer;
+    overflow: visible;
     transition: height 0.3s ease-out;
+}
+
+.accordian h4 {
+    margin-bottom: 30px;
+}
+
+.question {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px;
+    
+}
+
+.icon {
+    margin-right: 16px;
+    transition: transform 0.2s;
+}
+
+.icon.active {
+    transform: rotate(-180deg);
+}
+
+.answer {
+    color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s;
+    margin: 10px;
 }
 
 .perg.active {
     background-color: #E82C2C;
 }
 
-.perg i {
-    margin: 10px;
-    cursor: pointer;
-    transition: transform 0.3s ease-out;
-
-}
-
-.perg h3 {
-    margin: 10px;
-    transition: transform 0.3s ease-out;
-}
-
-
-.text-hidden {
-    display: none;
-    font-size: 16px;
-    color: white;
-    margin-top: 10px;
-    text-align: center;
-    transition: opacity 0.3s ease-out;
-}
-
-.perg.active .text-hidden {
+.question .active .answer {
     opacity: 1;
 }
 
