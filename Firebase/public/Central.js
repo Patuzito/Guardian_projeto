@@ -68,7 +68,11 @@ Buttons.forEach((Button, index) => {
         GetID("#content-text").innerText = currentContent.text;
         GetID("#content-logo").src = currentContent.logo;
         GetID("#content-image").src = currentContent.image;
+        
+
+
     });
+    
 });
 
 
