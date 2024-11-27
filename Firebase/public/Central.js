@@ -79,6 +79,52 @@ Buttons.forEach((Button, index) => {
 /* ==================================================
    PAGINA 3
 ================================================== */
+const videoSources = {
+    1: "https://github.com/Patuzito/Guardian_projeto/raw/refs/heads/main/Firebase/public/Videos/Video1.mp4",  
+    2: "https://github.com/Patuzito/Guardian_projeto/raw/refs/heads/main/Firebase/public/Videos/Video2.mp4",  
+    3: "https://github.com/Patuzito/Guardian_projeto/raw/refs/heads/main/Firebase/public/Videos/Video3.mp4"   
+};
+
+let currentVideo = 1;  // Inicializa o vídeo com o número 1
+const videoPlayer = document.getElementById("videoPlayer");
+
+// Select all the indicator elements
+const indicators = document.querySelectorAll(".indicator");
+
+window.onload = function() {
+    playVideo(currentVideo);  // Inicia o vídeo inicial
+    setInterval(changeVideo, 6000);  // Troca o vídeo a cada 6 segundos
+};
+
+function changeVideo() {
+    currentVideo = (currentVideo % 3) + 1;  // Altera entre os vídeos 1, 2, 3
+    playVideo(currentVideo);  // Reproduz o vídeo correspondente
+}
+
+function playVideo(videoNumber) {
+    // Muda o src do vídeo para o vídeo correspondente
+    if (videoSources[videoNumber]) {
+        videoPlayer.src = videoSources[videoNumber];
+        videoPlayer.load();  // Carrega o novo vídeo
+        videoPlayer.play();  // Inicia a reprodução automaticamente
+    }
+    
+    // Update active indicator
+    updateActiveIndicator(videoNumber);
+}
+
+function updateActiveIndicator(activeIndex) {
+    // Remove the 'active' class from all indicators
+    indicators.forEach(indicator => {
+        indicator.classList.remove("active");
+    });
+    
+    // Add the 'active' class to the current indicator
+    if (indicators[activeIndex - 1]) {
+        indicators[activeIndex - 1].classList.add("active");
+    }
+}
+
 
 
 
