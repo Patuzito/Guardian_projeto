@@ -482,8 +482,8 @@ h4 {
 .accordian {
     background-color: #E82C2C;
     color: var(--Whitetext);
-    width: 80%;
-    height: auto;
+    width: 70%;
+    height: 50px;
     border-radius: 5px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     cursor: pointer;
@@ -518,6 +518,8 @@ h4 {
     overflow: hidden;
     transition: max-height 0.2s;
     margin: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .perg.active {
