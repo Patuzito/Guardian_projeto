@@ -31,7 +31,6 @@ elements.forEach(element => myObserver.observe(element));
    PAGINA 2
 ================================================== */
 
-
 const Buttons = [
     GetID("#B1"),
     GetID("#B2"),
@@ -81,30 +80,9 @@ Buttons.forEach((Button, index) => {
    PAGINA 3
 ================================================== */
 
-// Array para armazenar os vídeos
-var videos = [
-    
-];
 
-// Função para trocar o vídeo com animação de desaparecer e aparecer
-function displayText(buttonNumber) {
-    var videoPlayer = document.getElementById("videoPlayer");
-    var videoSource = document.getElementById("videoSource");
 
-    // Desaparece o vídeo atual
-    videoPlayer.style.opacity = 0;
 
-    // Atraso para dar tempo de desaparecer o vídeo
-    setTimeout(function() {
-        // Altera o source do vídeo
-        videoSource.src = videos[buttonNumber - 1];
-        videoPlayer.load();  // Recarrega o vídeo
-        videoPlayer.play();  // Começa a reprodução do vídeo
-
-        // Volta a aparecer o vídeo com fade-in
-        videoPlayer.style.opacity = 1;
-    }, 0);  // Tempo de atraso de 1 segundo para coincidir com a duração do fade-out
-}
 
 
 
