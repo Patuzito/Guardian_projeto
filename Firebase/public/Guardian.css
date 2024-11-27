@@ -511,11 +511,14 @@ h4 {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     cursor: pointer;
     overflow: visible;
-    transition: height 0.3s ease-out;
+    transition: height 0.3s ease-in-out;
 }
 
 .accordian h4 {
     margin-bottom: 30px;
+    text-align: justify;
+    width: 900px;
+    
 }
 
 .question {
@@ -536,13 +539,15 @@ h4 {
 }
 
 .answer {
-    color: white;
+    color: rgb(243, 240, 240);
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.2s;
     margin: 10px;
     margin-top: 20px;
     margin-bottom: 20px;
+    transition: transform 2s;
+
 }
 
 .perg.active {
