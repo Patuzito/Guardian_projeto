@@ -75,7 +75,6 @@ Buttons.forEach((Button, index) => {
 });
 
 
-
 /* ==================================================
    PAGINA 3
 ================================================== */
@@ -126,14 +125,6 @@ function updateActiveIndicator(activeIndex) {
 }
 
 
-
-
-
-
-
-
-
-
 /* ==================================================
     HEADER
 ================================================== */
@@ -166,7 +157,7 @@ function mostrarSetaDepoisParar() {
     clearTimeout(scrollTimeout);
 
     const limiteInferior = document.documentElement.scrollHeight - window.innerHeight;
-    const isAtEnd = window.scrollY >= limiteInferior - 50;
+    const isAtEnd = window.scrollY >= limiteInferior - 60;
 
     if (!isAtEnd) {
         setaBaixo.classList.add('visivel');
@@ -219,6 +210,44 @@ accordians.forEach(accordian => {
         }
     });
 });
+
+/* ==================================================
+    PAGINA DE COMENTARIOS
+================================================== */
+
+let currentIndex = 0;
+const carousel = document.querySelector('.carousel');
+const comments = document.querySelectorAll('.comment');
+const commentWidth = document.querySelector('.comment').offsetWidth + 20;
+const totalComments = comments.length;
+const visibleComments = 3;
+
+function updateCarousel() {
+    const offset = -currentIndex * commentWidth;
+    carousel.style.transform = `translateX(${offset}px)`;
+    comments.forEach((comment) => comment.classList.remove('center'));
+    const centerIndex = currentIndex + Math.floor(visibleComments / 2);
+    if (comments[centerIndex]) {
+        comments[centerIndex].classList.add('center');
+    }
+}
+
+function nextComments() {
+    if (currentIndex < totalComments - visibleComments) {
+        currentIndex++;
+        updateCarousel();
+    }
+}
+
+function prevComments() {
+    if (currentIndex > 0) {
+        currentIndex--;
+        updateCarousel();
+    }
+}
+
+updateCarousel();
+
 
 
 /* ==================================================

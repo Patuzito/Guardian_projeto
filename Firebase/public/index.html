@@ -19,7 +19,9 @@
     <title>Guardian</title>
     <link rel="stylesheet" href="Guardian.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="shortcut icon" href="https://github.com/Patuzito/Guardian_projeto/blob/main/Firebase/public/Imagens/Icone.png?raw=true" type="image/m8-icon" sizes="32x32">
+    <link rel="shortcut icon"
+        href="https://github.com/Patuzito/Guardian_projeto/blob/main/Firebase/public/Imagens/Icone.png?raw=true"
+        type="image/m8-icon" sizes="32x32">
 </head>
 
 <body>
@@ -139,11 +141,11 @@
                     <source id="videoSource" src="" type="video/mp4">
                     Seu navegador não suporta o vídeo.
                 </video>
-                  <div id="indicators" class="indicators">
-                <span class="indicator" id="indicator1"></span>
-                <span class="indicator" id="indicator2"></span>
-                <span class="indicator" id="indicator3"></span>
-            </div>
+                <div id="indicators" class="indicators">
+                    <span class="indicator" id="indicator1"></span>
+                    <span class="indicator" id="indicator2"></span>
+                    <span class="indicator" id="indicator3"></span>
+                </div>
             </div>
 
             <!-- Botões interativos -->
@@ -165,12 +167,12 @@
                             src="https://github.com/Patuzito/Guardian_projeto/blob/main/Firebase/public/Imagens/pag3/3.png?raw=true"
                             alt=""></span>
                     <h2>Observe o resultado</h2> <i class="fa-regular fa-circle-check fa-5x Icons"></i>
-                    
+
                 </div>
-                
+
             </div>
-            
-          
+
+
         </div>
 
 
@@ -256,6 +258,60 @@
 
         </main>
 
+    </section>
+
+    <!-- ==================================================
+        PAGINA DE COMENTARIOS
+    ================================================== -->
+
+    <section class="hidden pag-c">
+        <h2>Experiência dos Usuarios</h2>
+        <main class="content pag-comnt"> 
+            <div class="carousel-container">
+                <button class="arrow left" onclick="prevComments()">&#8249;</button>
+                <div class="carousel-wrapper">
+                    <div class="carousel">
+                        <div class="comment">
+                            <img src="user1.jpg" alt="Usuário 1" class="profile-pic">
+                            <h3 class="username">Erick Hiroshi</h3>
+                            <h5 class="username">Desenvolvedor Roblox</h5>
+                            <p class="comment-text">"Adorei este produto, super recomendo!"</p>
+                        </div>
+                        <div class="comment">
+                            <img src="user2.jpg" alt="Usuário 2" class="profile-pic">
+                            <h3 class="username">João Vitor</h3>
+                            <h5 class="username">Techleader & Pscicólogo</h5>
+                            <p class="comment-text">“Tive problemas com a conexãode Wi-Fi, isso estava gerando problemas com o meu trabalho, reportei à Guardian e resolveram a minha situação.”</p>
+                        </div>
+                        <div class="comment">
+                            <img src="user3.jpg" alt="Usuário 3" class="profile-pic">
+                            <h3 class="username">Brenno Oliveira</h3>
+                            <h5 class="username">Desenvolvedor Full Stack</h5>
+                            <p class="comment-text">“Meu sistema operacional não inicializava e apresentava comportamentos estranhos, apresentei para a Guardian e eles conseguram resolver o meu problema.” </p>
+                        </div>
+                        <div class="comment">
+                            <img src="user4.jpg" alt="Usuário 4" class="profile-pic">
+                            <h3 class="username">Mateus Henrique</h3>
+                            <h5 class="username">Designer Gráfico UI UX </h5>
+                            <p class="comment-text">“A minha situação era o HD do meu Computador, delatei a Guardian e conseguiram resolver meu problema com maestria.” </p>
+                        </div>
+                        <div class="comment">
+                            <img src="user5.jpg" alt="Usuário 5" class="profile-pic">
+                            <h3 class="username">Luis Victor</h3>
+                            <h5 class="username">Padeiro profissional</h5>
+                            <p class="comment-text">"Produto chegou no prazo, muito satisfeito."</p>
+                        </div>
+                        <div class="comment">
+                            <img src="user6.jpg" alt="Usuário 6" class="profile-pic">
+                            <h3 class="username">Henrique Gomes</h3>
+                            <h5 class="username">Farmaceutico Hospitalar</h5>
+                            <p class="comment-text">"Qualidade excelente e preço justo. Me ajudou muito!!"</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="arrow right" onclick="nextComments()">&#8250;</button>
+            </div>
+        </main>
     </section>
 
     <!-- ==================================================
