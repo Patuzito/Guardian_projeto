@@ -31,14 +31,8 @@ elements.forEach(element => myObserver.observe(element));
    PAGINA 2
 ================================================== */
 
-const Buttons = [
-    GetID("#B1"),
-    GetID("#B2"),
-    GetID("#B3")
-];
-
-const content = {
-    1: {
+const contentData = {
+ 1: {
         title: "Ajuda com Hardware",
         text: "A ajuda com hardware é fundamental para solucionar problemas em dispositivos como computadores, substituição de peças e manutenção preventiva. Esse suporte é essencial para evitar transtornos eaumentar a durabilidade dos dispositivos, seja para usuários domésticos ou empresas.",
         logo: "https://github.com/Patuzito/Guardian_projeto/blob/main/Firebase/public/Imagens/Pag4/Guardian%20nome%20branco.png?raw=true",
@@ -58,21 +52,58 @@ const content = {
     }
 };
 
-Buttons.forEach((Button, index) => {
-    Button.addEventListener("click", () => {
-        // Atualiza o conteúdo baseado no botão clicado
-        const currentContent = content[index + 1]; // Ajuste para pegar o conteúdo correto (1, 2 ou 3)
+function showContent(id) {
+    const contentBox = document.querySelector('.text-content');
+    const contentImage = document.getElementById('content-image');
+    const contentLogo = document.getElementById('content-logo');
+    const indicator3 = document.getElementById('indicator21');
+    const indicator4 = document.getElementById('indicator22');
+    const indicator5 = document.getElementById('indicator23');
 
-        GetID("#content-title").innerText = currentContent.title;
-        GetID("#content-text").innerText = currentContent.text;
-        GetID("#content-logo").src = currentContent.logo;
-        GetID("#content-image").src = currentContent.image;
-        
+    // Esconde o conteúdo atual com transição
+    contentBox.classList.add('hidden');
+    contentImage.classList.add('hidden');
+    contentLogo.classList.add('hidden');
 
+    setTimeout(() => {
+        // Atualiza o conteúdo após a animação de saída
+        document.getElementById('content-title').innerText = contentData[id].title;
+        document.getElementById('content-text').innerText = contentData[id].text;
+        contentLogo.src = contentData[id].logo;
+        contentImage.src = contentData[id].image;
 
+        // Reseta a cor dos indicadores
+        resetIndicators();
+// Função para adicionar as classes corretas com base no texto
+function updateIndicator(indicator, keyword, text) {
+    if (text.includes(keyword)) {
+        indicator.classList.remove('default');
+        indicator.classList.add('red');
+    } else {
+        indicator.classList.remove('red');
+        indicator.classList.add('default');
+    }
+}
+
+// Atualiza os indicadores
+updateIndicator(indicator3, 'hardware', contentData[id].text);
+updateIndicator(indicator4, 'software', contentData[id].text);
+updateIndicator(indicator5, 'atualizações', contentData[id].text);
+
+// Mostra o novo conteúdo com transição
+contentBox.classList.remove('hidden');
+contentImage.classList.remove('hidden');
+contentLogo.classList.remove('hidden');
+}, 500); // Tempo da animação em milissegundos
+
+// Função para resetar indicadores de forma dinâmica
+function resetIndicators() {
+    const indicators = document.querySelectorAll('[id^="indicator"]'); // Seleciona todos os elementos com id que começa com 'indicator'
+    indicators.forEach(indicator => {
+        indicator.classList.remove('red', 'default'); // Remove as classes 'red' e 'default'
     });
-    
-});
+}
+}
 
 
 /* ==================================================

@@ -357,30 +357,45 @@ h4 {
     flex-shrink: 0;
 }
 
-.fade {
-    animation: fadeOut 0.5s forwards;
+
+
+.text-content, .molier, .logob {
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
 }
 
-.fadeIn {
-    animation: fadeIn 0.5s forwards;
+.text-content.hidden, .molier.hidden, .logob.hidden {
+    opacity: 0;
 }
 
-@keyframes fadeOut {
-    0% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-    }
+
+.indicators2 {
+    display: flex;
+    justify-content: center;
+    margin-top: -20px;
+    margin-bottom: 20px;
+    
 }
 
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
+
+
+.indicator2 {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #ccc;
+    margin: 0 5px;
+    transition: background-color 0.3s ease;
+}
+
+.indicator2.red {
+    background-color: red;
+}
+
+
+
+.indicator2.default {
+    background-color: #ccc; 
 }
 
 
